@@ -17,7 +17,7 @@ This project is intended as an example, since it does not useful on its own.
 * Monitor the database table (by default "t1") where all incoming MQTT messages should end up.
 
 ### Improvements
-* More functionality from Smappee API can be implemented in the SmappeeClient.java and [SmappeeController.java]((https://github.com/Theoklitos/smappee-service/blob/master/src/main/java/de/diedev/smappee/controller/SmappeeController.java)) classes. Existing methods can be used as examples.
+* More functionality from Smappee API can be implemented in the [SmappeeClient.java](https://github.com/Theoklitos/smappee-service/blob/master/src/main/java/de/diedev/smappee/client/SmappeeClient.java) and [SmappeeController.java](https://github.com/Theoklitos/smappee-service/blob/master/src/main/java/de/diedev/smappee/controller/SmappeeController.java) classes. Existing methods can be used as examples.
 * The MQTT messaging stuff is inside the MqttSubscriptionService.java where new messages are consumed asynchronously via the messageArrived() method. There also exists a method to send messages to the same topic, to be used as an example.
 
 ### Issues
