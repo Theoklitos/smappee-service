@@ -1,7 +1,7 @@
 ## Spring Boot Integration with Smappee and MQTT
 
 ### What does this app do?
-It uses oauth2 to access the functionality of the [Smappee API](https://smappee.atlassian.net/wiki/spaces/DEVAPI/overview) by its own controller. It also subscribes to an MQTT broker and consumes new messages by writing them into a database.
+It uses oauth2 to access the functionality of the [Smappee API](https://smappee.atlassian.net/wiki/spaces/DEVAPI/overview) via its own controller ([SmappeeController.java](https://github.com/Theoklitos/smappee-service/blob/master/src/main/java/de/diedev/smappee/controller/SmappeeController.java)). It also subscribes to an MQTT broker and consumes new messages by writing them into a database.
 
 [More information on MQTT messaging, with examples.](https://www.hivemq.com/blog/how-to-get-started-with-mqtt)
 
@@ -17,7 +17,7 @@ This project is intended as an example, since it does not useful on its own.
 * Monitor the database table (by default "t1") where all incoming MQTT messages should end up.
 
 ### Improvements
-* More functionality from Smappee API can be implemented in the SmappeeService.java and SmappeeController.java classes. Existing methods can be used as examples.
+* More functionality from Smappee API can be implemented in the SmappeeClient.java and [SmappeeController.java]((https://github.com/Theoklitos/smappee-service/blob/master/src/main/java/de/diedev/smappee/controller/SmappeeController.java)) classes. Existing methods can be used as examples.
 * The MQTT messaging stuff is inside the MqttSubscriptionService.java where new messages are consumed asynchronously via the messageArrived() method. There also exists a method to send messages to the same topic, to be used as an example.
 
 ### Issues
