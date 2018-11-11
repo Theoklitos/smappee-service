@@ -1,7 +1,11 @@
 ## Spring Boot Integration with Smappee and MQTT
 
 ### What does this app do?
-It exposes 
+It uses oauth2 to access the functionality of the [Smappee API](https://smappee.atlassian.net/wiki/spaces/DEVAPI/overview) by its own controller. It also subscribes to an MQTT broker and consumes new messages by writing them into a database.
+
+[More information on MQTT messaging, with examples.](https://www.hivemq.com/blog/how-to-get-started-with-mqtt)
+
+This project is intended as an example, since it does not useful on its own.
 
 ### How to start
 * Configure your database, MQTT broker and Smappee oauth2 credentials in a new  applications.properties file. Use the applications.properties.example file as an example.
@@ -15,7 +19,6 @@ It exposes
 ### Improvements
 * More functionality from Smappee API can be implemented in the SmappeeService.java and SmappeeController.java classes. Existing methods can be used as examples.
 * The MQTT messaging stuff is inside the MqttSubscriptionService.java where new messages are consumed asynchronously via the messageArrived() method. There also exists a method to send messages to the same topic, to be used as an example.
-
 
 ### Issues
 * Not much in terms of exception handling.
