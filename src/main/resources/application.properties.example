@@ -1,0 +1,23 @@
+############################ DB #############################
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/db-name
+spring.datasource.username=
+spring.datasource.password=
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+
+############################ APP ############################
+
+#-------------------------- Security -----------------------#
+
+smappee.security.oauth2.clientId=
+smappee.security.oauth2.secret=
+smappee.security.username=
+smappee.security.password=
+
+smappee.messaging.security.username=
+smappee.messaging.security.password=
+smappee.messaging.topic=
+smappee.messaging.host=
